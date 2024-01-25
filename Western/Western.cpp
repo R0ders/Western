@@ -40,4 +40,5 @@ int main()
 	jenny.changeDeRobe("verte");
 	lucky.boit();
 	jenny.boit();
+
 }
