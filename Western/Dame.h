@@ -1,5 +1,6 @@
 #pragma once
 #include "Humain.h"
+#include "Cowboy.h"
 
 // herite de la classe Humain
 class Dame :
@@ -14,4 +15,9 @@ public:
 	string getEtat() const;
 	void sePresente() const;
 	void changeDeRobe(const string couleurRobe);
+	void seFaitKidnapper();
+	void seFaitLiberer();
+private:
+	void hurle();
+	void remercie(const Cowboy & heros);
 };
