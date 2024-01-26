@@ -13,7 +13,7 @@ public:
 	string getBoissonFavorite() const;
 	void setBoissonFavorite(const string nouvelleBoissonFavorite);
 	void parle(const string texte);
-	string getNom();
+	string getNom() const;
 	void sePresente();
 	void boit();
 };

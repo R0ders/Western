@@ -27,18 +27,47 @@ int main()
 }
 */
 
+/*
 int main()
 {
 	Cowboy lucky("Lucky Luke");
 	Dame jenny("Jenny");
 
 	// 1. La rencontre...
+	
 	lucky.sePresente();
 	jenny.sePresente();
 
 	// 2. Allons boire un coup...
+	
 	jenny.changeDeRobe("verte");
 	lucky.boit();
 	jenny.boit();
 
+}
+*/
+
+int main()
+{
+	Cowboy lucky("Lucky Luck", "coca-cola");
+	Dame jenny("Jenny");
+	Brigand joe("Joe");
+
+	// 1. La rencontre...
+	
+	lucky.sePresente();
+	jenny.sePresente();
+
+	// 2. Mais un brigand arrive...
+
+	joe.sePresente();
+	joe.kidnappe(jenny);
+
+	// 3. Heureusement le cowboy s'interpose...
+
+	lucky.sePresente();
+	joe.sePresente();
+	lucky.tire(joe);
+	lucky.emprisonne(joe);
+	lucky.libere(jenny);
 }

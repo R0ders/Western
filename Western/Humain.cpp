@@ -22,7 +22,7 @@ void Humain::parle(const string texte)
 	cout << "(" << nom << ") --" << texte << endl;
 }
 
-string Humain::getNom()
+string Humain::getNom() const
 {
 	return nom;
 }

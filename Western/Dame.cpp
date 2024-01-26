@@ -30,20 +30,21 @@ void Dame::changeDeRobe(const string couleurRobe)
 
 void Dame::seFaitKidnapper()
 {
-	cout << "** " << hurle << endl;
+	cout << "** " << getNom() << "hurle" << endl;
+	hurle();
 }
 
-void Dame::seFaitLiberer()
+void Dame::remercie(const Cowboy& heros)
 {
-	cout << "(" << nom << ") -- " << remercie << endl;
+	cout << "(" << nom << ") -- " << "Merci " << heros.getNom() << ", je suis enfin libre !" << endl;
+}
+
+void Dame::seFaitLiberer(const Cowboy & heros)
+{
+	remercie(heros);
 }
 
 void Dame::hurle()
 {
-	cout << getNom() << " hurle" << endl;
-}
-
-void Dame::remercie(const Cowboy & heros)
-{
-	cout << "(" << nom << ") -- " << "Merci " << nom << ", je suis enfin libre !" << endl;
+	cout << "(" << nom << ") -- " << "Au secours, je me fais kidnapper !" << endl;
 }

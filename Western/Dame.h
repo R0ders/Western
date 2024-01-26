@@ -1,6 +1,10 @@
 #pragma once
 #include "Humain.h"
 #include "Cowboy.h"
+#include <iostream>
+using namespace std;
+
+class Cowboy;
 
 // herite de la classe Humain
 class Dame :
@@ -16,7 +20,8 @@ public:
 	void sePresente() const;
 	void changeDeRobe(const string couleurRobe);
 	void seFaitKidnapper();
-	void seFaitLiberer();
+	void seFaitLiberer(const Cowboy & heros);
+
 private:
 	void hurle();
 	void remercie(const Cowboy & heros);
