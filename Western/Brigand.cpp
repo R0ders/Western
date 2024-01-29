@@ -1,7 +1,8 @@
 #include "Brigand.h"
+#include "Dame.h"
 
-Brigand::Brigand(const string nom, const string boissonFavorite, const string comportement)
-	:Humain(nom, boissonFavorite), comportement(comportement)
+Brigand::Brigand(const string nom, const string boissonFavorite, const string comportement, const bool enPrison)
+	:Humain (nom, boissonFavorite), comportement(comportement), enPrison(enPrison)
 {
 }
 
@@ -23,6 +24,12 @@ int Brigand::getRecompense() const
 void Brigand::sePresente() const
 {
 	cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << " le " << getComportement() << " et j'aime le " << getBoissonFavorite() << "." << endl;
+	
+	if (nbDamesEnleves == 1)
+	{
+		cout << "(" << nom << ") -- " << "j'ai l'air mechant et j'ai deja kidnappe " << getNbDamesEnlevees() << " dames !" << endl;
+		cout << "(" << nom << ") -- " << "Ma tete est mise a pris " << getRecompense() << " $" << endl;
+	}
 }
 
 void Brigand::kidnappe(Dame& dame)
@@ -30,9 +37,9 @@ void Brigand::kidnappe(Dame& dame)
 	if (!estEnPrison())
 	{
 		dame.seFaitKidnapper();
-		nbDamesEnleves++;
+		nbDamesEnleves = nbDamesEnleves + 1;
 		augmenteRecompense();
-		cout << "(" << nom << ") -- " << "Ah ah !" << dame.getNom() << "tu es mienne désormais !" << endl;
+		cout << "(" << nom << ") -- " << "Ah ah !" << " " << dame.getNom() << " tu es mienne desormais !" << endl;
 	}
 }
 
@@ -41,7 +48,7 @@ void Brigand::seFaitEmprisonner(Cowboy& cowboy)
 	if (!estEnPrison())
 	{
 		enPrison = true;
-		cout << "(" << nom << ") -- " << "Damned je suis fait ! " << nom << ", tu m'as eu !" << endl;
+		cout << "(" << nom << ") -- " << "Damned je suis fait ! " << cowboy.getNom() << ", tu m'as eu !" << endl;
 	}
 }
 

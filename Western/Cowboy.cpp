@@ -27,7 +27,7 @@ void Cowboy::setQualite(const string qualite)
 
 void Cowboy::sePresente()
 {
-	cout << "(" << nom << ") -- " << "Bonjour, je m'appelle " << nom << " et je suis " << adjectif << endl;
+	cout << "(" << nom << ") -- " << "Bonjour, je suis le " << adjectif << " " << nom << " et j'aime le " << getBoissonFavorite() << endl;
 }
 
 void Cowboy::incrementePopulaire()
@@ -42,7 +42,7 @@ void Cowboy::decrementePopulaire()
 
 void Cowboy::tire(const Brigand& brigand)
 {
-	cout << "Le " << adjectif << nom << " tire sur " << brigand.getNom() << ". PAN !" << endl;
+	cout << "** " << "Le " << adjectif << " " << nom << " tire sur " << brigand.getNom() << ". PAN !" << endl;
 }
 
 void Cowboy::emprisonne(Brigand& brigand)
@@ -52,6 +52,6 @@ void Cowboy::emprisonne(Brigand& brigand)
 
 void Cowboy::libere(Dame& dame)
 {
-	cout << "** " << "Le " << adjectif << getNom() << "libere" << dame.getNom() << endl;
-	dame.seFaitLiberer();
+	cout << "** " << "Le " << adjectif << " " << getNom() << " libere " << dame.getNom() << endl;
+	dame.seFaitLiberer(getNom());
 }

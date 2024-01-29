@@ -30,7 +30,7 @@ void Dame::changeDeRobe(const string couleurRobe)
 
 void Dame::seFaitKidnapper()
 {
-	cout << "** " << getNom() << "hurle" << endl;
+	cout << "** " << getNom() << " hurle" << endl;
 	hurle();
 }
 

@@ -13,11 +13,11 @@ class Brigand :
 {
 private:
 	string comportement;
-	int nbDamesEnleves;
-	int recompense;
+	int nbDamesEnleves = 0;
+	int recompense = 0;
 	bool enPrison;	// bool represente des valeurs booleennes donc si il est en prison ou si il n'est pas en prison.
 public:
-	Brigand(const string nom, const string boissonFavorite = "tord-boyaux", const string comportement = "mechant");
+	Brigand(const string nom, const string boissonFavorite = "tord-boyaux", const string comportement = "mechant", const bool enPrison = false);
 	string getComportement() const;
 	int getNbDamesEnlevees() const;
 	int getRecompense() const;
