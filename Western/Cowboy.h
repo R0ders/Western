@@ -21,6 +21,7 @@ public:
 	string getQualite();
 	void setQualite(const string qualite);
 	void sePresente();
+	void presentezVous(const Humain& humain);
 	void incrementePopulaire();
 	void decrementePopulaire();
 	void tire(const Brigand & brigand);

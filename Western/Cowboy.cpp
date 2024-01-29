@@ -30,6 +30,11 @@ void Cowboy::sePresente()
 	cout << "(" << nom << ") -- " << "Bonjour, je suis le " << adjectif << " " << nom << " et j'aime le " << getBoissonFavorite() << endl;
 }
 
+void Cowboy::presentezVous(const Humain& humain)
+{
+	humain.sePresente()
+}
+
 void Cowboy::incrementePopulaire()
 {
 	popularite += 1;

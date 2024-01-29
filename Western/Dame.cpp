@@ -22,6 +22,11 @@ void Dame::sePresente() const
 	cout << "(" << nom << ") -- " << "Bonjour, je suis " << getNom() << " et j'ai une jolie robe " << couleurRobe << endl;
 }
 
+void Dame::presentezVous(const Humain& humain)
+{
+	humain.sePresente();
+}
+
 void Dame::changeDeRobe(const string couleurRobe)
 {
 	this->couleurRobe = couleurRobe; //this->couleurRobe permet de distinguer le parametre de la variable couleurRobe

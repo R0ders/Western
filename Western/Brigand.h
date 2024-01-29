@@ -22,6 +22,7 @@ public:
 	int getNbDamesEnlevees() const;
 	int getRecompense() const;
 	void sePresente() const;
+	void presentezVous(const Humain& humain);
 	void kidnappe(Dame & dame);
 	void seFaitEmprisonner(Cowboy & cowboy);
 	void augmenteRecompense(const int prix = 100);

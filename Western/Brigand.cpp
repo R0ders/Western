@@ -32,6 +32,11 @@ void Brigand::sePresente() const
 	}
 }
 
+void Brigand::presentezVous(const Humain& humain)
+{
+	humain.sePresente();
+}
+
 void Brigand::kidnappe(Dame& dame)
 {
 	if (!estEnPrison())

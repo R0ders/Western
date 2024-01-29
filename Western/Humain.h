@@ -14,6 +14,6 @@ public:
 	void setBoissonFavorite(const string nouvelleBoissonFavorite);
 	void parle(const string texte);
 	string getNom() const;
-	void sePresente();
+	virtual void sePresente() const;
 	void boit();
 };

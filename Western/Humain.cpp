@@ -27,10 +27,11 @@ string Humain::getNom() const
 	return nom;
 }
 
-void Humain::sePresente()
+void Humain::sePresente() const
 {
-	cout << "(" << nom << ") -- " <<"Bonjour, je m'appelle " << nom << " et ma boisson favorite est " << boissonFavorite << endl;
+	cout << "(" << nom << ") -- " << "Bonjour, je m'appelle " << nom << " et ma boisson favorite est " << boissonFavorite << endl;
 }
+
 
 void Humain::boit()
 {

@@ -18,6 +18,7 @@ public:
 	string getNom() const;
 	string getEtat() const;
 	void sePresente() const;
+	void presentezVous(const Humain& humain);
 	void changeDeRobe(const string couleurRobe);
 	void seFaitKidnapper();
 	void seFaitLiberer(const Cowboy & heros);
