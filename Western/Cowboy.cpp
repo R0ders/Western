@@ -32,7 +32,7 @@ void Cowboy::sePresente()
 
 void Cowboy::presentezVous(const Humain& humain)
 {
-	humain.sePresente()
+	humain.sePresente();
 }
 
 void Cowboy::incrementePopulaire()

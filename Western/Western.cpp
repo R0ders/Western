@@ -5,6 +5,7 @@
 #include "Humain.h"
 #include "Dame.h"
 #include "Cowboy.h"
+#include "Barman.h"
 using namespace std;
 
 /*
@@ -53,6 +54,7 @@ int main()
 }
 */
 
+/*
 
 // Histoire 3:
 
@@ -79,4 +81,22 @@ int main()
 	lucky.tire(joe);
 	lucky.emprisonne(joe);
 	lucky.libere(jenny);
+}
+*/
+
+int main()
+{
+	Cowboy lucky("Lucky Luck", "coca-cola");
+	Dame jenny("Jenny");
+	Brigand joe("Joe");
+	Barman robert("Robert", "Saloon Robert");
+
+	lucky.sePresente();
+	jenny.sePresente();
+	joe.sePresente();
+
+	robert.sePresente();
+	robert.sert(lucky);
+	robert.sert(jenny);
+	robert.sert(joe);
 }

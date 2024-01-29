@@ -22,7 +22,7 @@ void Barman::presentezVous(const Humain& humain)
 
 void Barman::sert(const Humain& client)
 {
-	cout << "(" << nom << ") -- " << "Tiens " << client.getNom() << " un verre de " << client.getBoissonFavorite()
+	cout << "(" << nom << ") -- " << "Tiens " << client.getNom() << " un verre de " << client.getBoissonFavorite() << " " << terminePhrase() << endl;
 }
 
 string Barman::terminePhrase()

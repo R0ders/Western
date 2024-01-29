@@ -11,7 +11,7 @@ class Dame;
 class Cowboy :
 	public Humain
 {
-private:
+protected:
 	int popularite;
 	string adjectif;
 public:
