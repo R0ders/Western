@@ -8,6 +8,9 @@
 using namespace std;
 
 /*
+
+// Histoire 1:
+
 int main()
 {
 	Humain lucky("Lucky Luke", "coca-cola");
@@ -28,6 +31,9 @@ int main()
 */
 
 /*
+
+// Histoire 2:
+
 int main()
 {
 	Cowboy lucky("Lucky Luke");
@@ -46,6 +52,9 @@ int main()
 
 }
 */
+
+
+// Histoire 3:
 
 int main()
 {
