@@ -1,7 +1,9 @@
 #include "Sherif.h"
 
-Sherif::Sherif(const string nom, const string boissonFavorite, const string adjectif)
-	:Cowboy(nom, getBoissonFavorite()), adjectif(adjectif)
+
+
+Sherif::Sherif(const string nom, const string boissonFavorite, const int popularite, const string adjectif)
+	:Cowboy(nom, boissonFavorite, popularite, adjectif)
 {
 }
 
@@ -27,7 +29,7 @@ void Sherif::coffreBrigands()
 
 void Sherif::rechercheBrigands(Brigand & brigands)
 {
-	cout << "** " << "OYEZ OYEZ BRAVE GENS !! " << brigands.getRecompense() << " $ a qui arretera " << brigands.getNom() << " " << brigands.getComportement() << " mort ou vif !!" << endl;
+	cout << "** " << "OYEZ OYEZ BRAVE GENS !! " << brigands.getRecompense() + 100 << " $ a qui arretera " << brigands.getNom() << " " << brigands.getComportement() << " mort ou vif !!" << endl;
 }
 
 void Sherif::augmenteNbBrigandsCoffrer()

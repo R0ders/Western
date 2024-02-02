@@ -6,6 +6,7 @@
 #include "Dame.h"
 #include "Cowboy.h"
 #include "Barman.h"
+#include "Sherif.h"
 using namespace std;
 
 /*
@@ -84,6 +85,10 @@ int main()
 }
 */
 
+/*
+
+// Histoire 4a :
+
 int main()
 {
 	Cowboy lucky("Lucky Luck", "coca-cola");
@@ -99,4 +104,24 @@ int main()
 	robert.sert(lucky);
 	robert.sert(jenny);
 	robert.sert(joe);
+}
+*/
+
+// Histoire 4b :
+
+int main()
+{
+	Cowboy lucky("Lucky Luck", "coca-cola");
+	Dame jenny("Jenny");
+	Brigand joe("Joe");
+	Barman robert("Robert", "Saloon Robert");
+	Sherif clint("Clint");
+
+	lucky.sePresente();
+	jenny.sePresente();
+	joe.sePresente();
+	robert.sePresente();
+	clint.sePresente();
+	clint.rechercheBrigands(joe);
+	joe.seFaitEmprisonner(clint);
 }
