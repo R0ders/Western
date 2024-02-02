@@ -2,6 +2,7 @@
 #include "Humain.h"
 #include "Brigand.h"
 #include "Dame.h"
+#include "Arme.h"
 #include <iostream>
 using namespace std;
 
@@ -14,17 +15,30 @@ class Cowboy :
 protected:
 	int popularite;
 	string adjectif;
+
 public:
 	Cowboy(const string nom, const string boissonFavorite = "whisky", const int popularite = 0, const string adjectif = "vaillant");
+
 	int getPopularite();
 	void setPopularite(const int populaire);
 	string getQualite();
+	
 	void setQualite(const string qualite);
 	void sePresente();
 	void presentezVous(const Humain& humain);
 	void incrementePopulaire();
 	void decrementePopulaire();
-	void tire(const Brigand & brigand);
+	void tire(const Brigand& brigand);
+	void tires(Brigand& brigand);	//utilise classe arme
 	void emprisonne(Brigand & brigand);
 	void libere(Dame & dame);
+	
+	~Cowboy(); // Destructeur
+
+//..........................................................................................................................................................................................................................................................................
+private:
+	Arme* arme; //l'agregation
+	
+public:
+	void setArme(Arme* arme);
 };

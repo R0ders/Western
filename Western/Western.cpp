@@ -107,6 +107,8 @@ int main()
 }
 */
 
+/*
+
 // Histoire 4b :
 
 int main()
@@ -124,4 +126,44 @@ int main()
 	clint.sePresente();
 	clint.rechercheBrigands(joe);
 	joe.seFaitEmprisonner(clint);
+}
+*/
+
+/*
+int main()
+{
+	Cowboy lucky("Lucky Luck", "coca-cola");
+	Brigand joe("Joe");
+
+	// Un Smith & Wesson de 100 $ chargé de 5 balles
+	Arme* arme = new Arme("Smith & Wesson", 100, 5, 5);
+
+	lucky.setArme(arme);	// Lucky se procure une arme
+	 
+	// et tire sur joe
+	lucky.tires(joe);
+}
+*/
+
+int main()
+{
+	Cowboy lucky("Lucky Luck", "coca-cola");
+	Brigand joe("Joe");
+	Dame jenny("Jenny");
+	Barman robert("Robert", "Saloon Robert");
+	Sherif clint("Clint", "eau");
+
+	lucky.sePresente();
+	jenny.sePresente();
+	joe.sePresente();
+	robert.sePresente();
+
+
+	robert.sert(joe);
+
+	lucky.parle("** Raconte ses aventures");
+
+	clint.sePresente();
+	clint.rechercheBrigands(joe);
+
 }

@@ -2,7 +2,7 @@
 #include "Dame.h"
 
 Brigand::Brigand(const string nom, const string boissonFavorite, const string comportement, const bool enPrison)
-	:Humain (nom, boissonFavorite), comportement(comportement), enPrison(enPrison)
+	:Humain (nom, boissonFavorite), comportement(comportement), enPrison(enPrison), arme(NULL)
 {
 }
 
@@ -69,7 +69,32 @@ void Brigand::diminueRecompense(const int prix)
 		this->recompense -= prix;
 }
 
+void Brigand::tire(Cowboy& cowboy)
+{
+	if (arme != NULL)	// ai-je une arme ?
+	{
+		if (arme->getNbBalles() != 0)	// est-elle chargee ?
+		{
+			cout << "Le " << comportement << " " << nom << " tire sur " << cowboy.getNom() << endl;
+			arme->tire();
+		}
+	}
+}
+
 bool Brigand::estEnPrison() const
 {
 	return enPrison;
+}
+
+Brigand::~Brigand()
+{
+	// ai-je une arme a detruire ?
+	if (arme != NULL) delete
+
+		arme;
+}
+
+void Brigand::setArme(Arme* arme)
+{
+	this->arme = arme;
 }
