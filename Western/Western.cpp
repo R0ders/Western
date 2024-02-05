@@ -152,6 +152,9 @@ int main()
 	Dame jenny("Jenny");
 	Barman robert("Robert", "Saloon Robert");
 	Sherif clint("Clint", "eau");
+	
+	// Un Smith & Wesson de 100 $ chargé de 5 balles
+	Arme* arme = new Arme("Smith & Wesson", 100, 5, 5);
 
 	lucky.sePresente();
 	jenny.sePresente();
@@ -161,9 +164,26 @@ int main()
 
 	robert.sert(joe);
 
-	lucky.parle("** Raconte ses aventures");
+	cout <<  "** " << lucky.getNom() << " raconte ses aventures" << endl;
 
 	clint.sePresente();
 	clint.rechercheBrigands(joe);
 
+	joe.boit();
+	
+	lucky.parle("je t'ai enfin trouver joe");
+	joe.parle("tu es venu m'arreter n'est ce pas ?");
+	lucky.parle("Tu est tres perspicace");
+	joe.parle("je me laisserai pass faire ! hahaha !!");
+	lucky.parle("que dirais tu de regle sa par un duel ?");
+	joe.parle("qu'est ce que j'y gagne ?");
+	lucky.parle("ta libertee");
+	joe.parle("j'accepte");
+
+	cout << "** " << lucky.getNom() << " le " << lucky.getQualite() << " et " << joe.getNom() << " le " << joe.getComportement() << " se place face a face" << endl;
+	
+	lucky.setArme(arme);
+	joe.setArme(arme);
+
+	lucky.tires(joe);
 }

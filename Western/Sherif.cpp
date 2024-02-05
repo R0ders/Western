@@ -19,7 +19,7 @@ string Sherif::getNom()
 
 void Sherif::sePresente()
 {
-	cout << "Bonjour, je suis " << getNom() << " et j'aime le " << getBoissonFavorite() << endl;
+	cout << "(" << nom << ")-- " << "Bonjour, je suis " << getNom() << " et j'aime le " << getBoissonFavorite() << endl;
 }
 
 void Sherif::coffreBrigands()

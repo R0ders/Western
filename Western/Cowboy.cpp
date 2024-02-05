@@ -58,7 +58,7 @@ void Cowboy::tires(Brigand& brigand)
 	{
 		if (arme->getNbBalles() != 0)	// est-elle chargee ?
 		{
-			cout << "Le " << adjectif << " " << nom << " tire sur " << brigand.getNom() << endl;
+			cout << "** " << "Le " << adjectif << " " << nom << " tire sur " << brigand.getNom() << endl;
 			arme->tire();
 			emprisonne(brigand);
 		}
